@@ -1,0 +1,143 @@
+/* Estilos gerais */
+form {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .col-12 {
+    margin-bottom: 1rem;
+  }
+  
+  .col-8,
+  .col-4,
+  .md\:col-6,
+  .lg\:col-3 {
+    margin-bottom: 1rem;
+  }
+  
+  .flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .mt-5 {
+    margin-top: 2rem;
+  }
+  
+  .mt-2 {
+    margin-top: 0.5rem;
+  }
+  
+  /* Botões */
+  button[pButton] {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button[pButton]:hover {
+    background-color: #007ad9;
+    color: #fff;
+  }
+  
+  button[pButton][disabled] {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  /* Input com máscara */
+  p-inputMask {
+    width: 100%;
+  }
+  
+  p-inputMask input {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+  }
+  
+  p-inputMask input:focus {
+    border-color: #007ad9;
+    outline: none;
+  }
+  
+  /* Estilo para campos de texto */
+  input[pInputText] {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f5f5f5;
+    color: #333;
+  }
+  
+  input[pInputText][disabled] {
+    background-color: #e9ecef;
+    color: #6c757d;
+    cursor: not-allowed;
+  }
+  
+  span.p-float-label {
+    position: relative;
+    display: block;
+  }
+  
+  span.p-float-label input {
+    padding-left: 1rem;
+  }
+  
+  span.p-float-label label {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+    font-size: 0.875rem;
+    color: #6c757d;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  span.p-float-label input:focus + label,
+  span.p-float-label input:not(:placeholder-shown) + label {
+    top: 0;
+    transform: translateY(-50%) scale(0.8);
+    color: #007ad9;
+  }
+  
+  /* Ícones */
+  p-button .pi-arrow-left {
+    font-size: 1.25rem;
+    color: #007ad9;
+  }
+  
+  p-button:hover .pi-arrow-left {
+    color: #fff;
+  }
+  
+  /* Estilo adicional para responsividade */
+  @media (min-width: 768px) {
+    .md\:col-6 {
+      width: 50%;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .lg\:col-3 {
+      width: 25%;
+    }
+  }
+  
