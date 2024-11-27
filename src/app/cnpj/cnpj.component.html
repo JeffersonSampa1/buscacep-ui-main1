@@ -3,7 +3,7 @@
     <p-button icon="pi pi-arrow-left" styleClass="p-button-rounded p-button-text p-button-raised" routerLink="/"></p-button>
   </div>
   <div class="col-8 md:col-6 lg:col-3">
-    <p-inputMask type="tel" mask="99999999/9999-99" [(ngModel)]="buscacnpj"    minlength="14"  (onBlur)="buscarCNPJ(buscacnpj, form)"  name="cnpj" placeholder="9-9999999/999999" [unmask]="true" [required]="true"></p-inputMask>
+    <p-inputMask type="tel" mask="99.999.999/9999-99" [(ngModel)]="buscacnpj"    minlength="14"  (onBlur)="buscarCNPJ(buscacnpj, form)"  name="cnpj" placeholder="99-999999/999999" [unmask]="true" [required]="true"></p-inputMask>
   </div>
 
   <div class="col-4 md:col-6 lg:col-3">
@@ -17,8 +17,8 @@
     
     <div class="col-12 md:col-6 lg:col-3">
       <span class="p-float-label">
-        <input class="w-full" pInputText ngModel id="descricao_matriz_filial" name="descricao_matriz_filial" disabled="true">
-        <label htmlFor="descricao_matriz_filial">Matrix ou Filial</label>
+        <input class="w-full" pInputText ngModel id="cep" name="cep" disabled="true">
+        <label htmlFor="cep">Cep</label>
       </span>
     </div>
     <div class="col-12 md:col-6 lg:col-3">
@@ -47,14 +47,14 @@
     </div>
     <div class="col-12 md:col-6 lg:col-3 mt-2">
       <span class="p-float-label">
-        <input class="w-full" pInputText id="cidade" name="cidade" ngModel disabled="true">
-        <label htmlFor="cidade">Cidade</label>
+        <input class="w-full" pInputText id="municipio" name="municipio" ngModel disabled="true">
+        <label htmlFor="municipio">Municipio</label>
       </span>
     </div>
     <div class="col-12 md:col-6 lg:col-3 mt-2">
       <span class="p-float-label">
         <input class="w-full" pInputText id="uf" name="uf" ngModel disabled="true">
-        <label htmlFor="uf">Estado</label>
+        <label htmlFor="uf">UF</label>
       </span>
     </div>
   </div>

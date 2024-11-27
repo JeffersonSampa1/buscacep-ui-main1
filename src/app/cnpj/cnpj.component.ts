@@ -3,6 +3,7 @@ import { Title } from '@angular/platform-browser';
 import { MessageService } from 'primeng/api';
 import { CnpjService } from './cnpj.service';
 
+
 @Component({
   selector: 'app-cnpj',
   templateUrl: './cnpj.component.html',
@@ -17,11 +18,13 @@ export class CnpjComponent implements OnInit {
     private messageService: MessageService,
     private title: Title
   ) { }
+
   ngOnInit() {
     this.title.setTitle('Buscando CNPJ');
   }
+
   buscarCNPJ(buscacnpj: any, form: any) {
-    if (buscacnpj !== null && buscacnpj !== '' && buscacnpj >= 8) {
+    if (buscacnpj !== null && buscacnpj !== '' && buscacnpj >= 14) {
       this.cnpjService.consultaCNPJ(buscacnpj).subscribe({
         next: (dados: any) => {
           this.buscar = true;
@@ -44,13 +47,16 @@ export class CnpjComponent implements OnInit {
   }
 
   populaCNPJForm(dados: any, formulario: any) {
-    console.log('entrei no populacep');
+    console.log('entrei no populacnpj');
     console.log('dados antes', dados);
     formulario.form.patchValue({
-      logradouro: dados.street,
-      cidade: dados.city,
-      bairro: dados.neighborhood,
-      estado: dados.state
+      cep: dados.cep,
+      nome_fantasia: dados.nome_fantasia,
+      razao_social: dados.razao_social,
+      logradouro: dados.logradouro,
+      municipio: dados.municipio,
+      bairro: dados.bairro,
+      uf: dados.uf
     })
     console.log('dados depois', dados);
   }
